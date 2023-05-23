@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b3vkmfxunohh8"]
+[gd_scene load_steps=15 format=3 uid="uid://b3vkmfxunohh8"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_1h0vt"]
 [ext_resource type="Resource" uid="uid://nhd5voo3ikx1" path="res://DefaultMovementData.tres" id="2_06uy6"]
@@ -81,7 +81,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_delq7"]
 size = Vector2(8, 15)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1anyu"]
+size = Vector2(6, 12)
+
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 2
 floor_constant_speed = true
 floor_snap_length = 3.0
 script = ExtResource("1_1h0vt")
@@ -98,8 +102,20 @@ position = Vector2(0, -7.5)
 shape = SubResource("RectangleShape2D_delq7")
 
 [node name="CoyoteJumpTimer" type="Timer" parent="."]
-wait_time = 0.15
+wait_time = 0.1
 one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -32)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+
+[node name="HazardDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HazardDetector"]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_1anyu")
+
+[connection signal="area_entered" from="HazardDetector" to="." method="_on_hazard_detector_area_entered"]
