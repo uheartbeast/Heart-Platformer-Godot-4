@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Heart Platformer"
-run/main_scene="res://world.tscn"
+run/main_scene="res://level_one.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Events="*res://Events.gd"
+LevelTransition="*res://level_transition.tscn"
 
 [display]
 
