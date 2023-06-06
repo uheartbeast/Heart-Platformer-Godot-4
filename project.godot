@@ -28,6 +28,12 @@ window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 
+[gui]
+
+theme/custom="res://default_theme.tres"
+theme/custom_font="res://pixel_font.ttf"
+theme/default_font_subpixel_positioning=0
+
 [input]
 
 ui_accept={

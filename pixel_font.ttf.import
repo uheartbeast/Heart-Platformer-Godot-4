@@ -1,0 +1,38 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://cct61o865aun0"
+path="res://.godot/imported/pixel_font.ttf-4d2253b1d4ec33b958bd3aa7293270f0.fontdata"
+
+[deps]
+
+source_file="res://pixel_font.ttf"
+dest_files=["res://.godot/imported/pixel_font.ttf-4d2253b1d4ec33b958bd3aa7293270f0.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "New Configuration",
+"size": Vector2i(6, 0)
+}]
+language_support={}
+script_support={}
+opentype_features={}
